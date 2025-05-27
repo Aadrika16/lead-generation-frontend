@@ -38,10 +38,14 @@ const LeadGenerationForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="form">
-      <input type="text" placeholder="Name*" value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })} />
-      <input type="email" placeholder="Email*" value={formData.email} onChange={e => setFormData({ ...formData, email: e.target.value })} />
-      <input type="text" placeholder="Company" value={formData.company} onChange={e => setFormData({ ...formData, company: e.target.value })} />
-      <textarea placeholder="Message" value={formData.message} onChange={e => setFormData({ ...formData, message: e.target.value })} />
+      <lable htmlFor="name">Name</lable>
+      <input type="text" id="name" placeholder="Name*" value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })} />
+      <lable htmlFor="email">Email</lable>
+      <input type="email" placeholder="Email*" id="email" value={formData.email} onChange={e => setFormData({ ...formData, email: e.target.value })} />
+      <lable htmlFor="company">Company</lable>
+      <input type="text" id="company" placeholder="Company" value={formData.company} onChange={e => setFormData({ ...formData, company: e.target.value })} />
+       <lable htmlFor="message">Name</lable>
+      <textarea placeholder="Message" id="message" value={formData.message} onChange={e => setFormData({ ...formData, message: e.target.value })} />
       {error && <p>{error}</p>}
       <button type="submit">Submit</button>
     </form>
